@@ -8,7 +8,7 @@
 
 NAME=libfame
 VERSION=0.9.1
-BUILD=1
+BUILD=2
 
 cd $TMP
 tar -zxvf $CWD/$NAME-$VERSION.tar.gz
@@ -23,7 +23,8 @@ CXXFLAGS=$SLKCFLAGS \
             --prefix=/usr \
             --mandir=/usr/man \
             --enable-shared=yes \
-            --enable-static=no
+            --enable-static=no \
+            --enable-mmx=no
 
 make || exit 1
 
